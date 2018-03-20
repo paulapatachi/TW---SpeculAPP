@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup</title>
+	<link rel="stylesheet" type="text/css" href="navbar.css" />
+	<link rel="stylesheet" type="text/css" href="signup.css" />
+</head>
+<body>
+	<nav>
+		<ul class="navigation">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="login.html">Login</a></li>
+			<li><a class="active" href="signup.html">Signup</a></li>
+		</ul>
+	</nav>
+	<section id="signupform" >
+
+		<form id="myForm2" action="choice.html" onsubmit="return myFunction()">
+
+			<input type="text" id="firstname" name="firstname" placeholder="First Name"> <br>
+			<input type="text" id="lastname" name="lastname" placeholder="Last Name"> <br>
+			<input type="text" id="email" name="email" placeholder="E-mail" ><br>
+			<input type="password" id="password" name="password" placeholder="Password"><br>
+			<input id="sub" type="submit" value="Submit">
+			<p class="message">Already registered? <a href="login.html">Sign In</a></p>
+		</form> 
+	</section>
+</body>
+</html>
