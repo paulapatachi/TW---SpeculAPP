@@ -1,0 +1,146 @@
+/*.menu1{
+  text-align: center;
+  }
+
+.menu1 div{
+	display: inline-block;
+	text-align: left;
+	
+	height: 480px;
+	margin: 20px;
+	border-bottom: 8px solid black;
+	border-top: 8px solid black;
+    
+	text-align:center;
+	background-color: rgba(0,0,0,0.7);
+  color: white;
+  width: 400px;
+}*/
+main {
+  padding-top: 30px;
+  width:100%;
+}
+
+#upperleft{
+	position: relative;
+	float:left;
+	height: 480px;
+	margin: 20px;
+	border-bottom: 8px solid black;
+	border-top: 8px solid black;
+	
+    background-color: rgba(0,0,0,0.7);
+	color: white;
+	width: 30%;
+}
+
+#center{
+	font-size: 20px;
+	position: relative;
+	float:left;
+	height: 480px;
+	margin: 20px;
+	border-bottom: 8px solid black;
+	border-top: 8px solid black;
+	text-align:center;
+    background-color: rgba(0,0,0,0.7);
+	color: white;
+	width: 30%;
+}
+
+#upperright{
+	position: relative;
+	float:left;
+	height: 480px;
+	margin: 20px;
+	border-bottom: 8px solid black;
+	border-top: 8px solid black;
+	
+    background-color: rgba(0,0,0,0.7);
+	color: white;
+	width: 30%;
+}
+
+/*.inline-block-center {
+  text-align: center;
+}
+.inline-block-center div {
+  display: inline-block;
+  text-align: left;
+}*/
+/*.inline-block-center{
+	display: flex;
+	justify-content: center;
+}*/
+/*.upperleft{
+	float: left;
+	width:49%;
+	height:480px;
+	border-bottom: 8px solid black;
+	border-top: 8px solid black;
+    background-color: rgba(0,0,0,0.7);
+	text-align:center;
+}
+.upperright{
+	float: right;
+	width:49%;
+	height: 480px;
+	border-bottom: 8px solid black;
+	border-top: 8px solid black;
+    background-color: rgba(0,0,0,0.7);
+	color: white;
+	font-family: "Roboto", sans-serif;
+	text-align: center;
+	font-size: 18px;
+}
+*/
+.par{
+	margin-top:20%;
+}
+
+.newgame{
+	
+	margin-top: 1%;
+	background: black;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.newgame:hover,.newgame:active,.newgame:focus {
+  background-color: white;
+  color:black;
+}
+
+
+
+
+#best{
+	margin-top:80px;
+	width:100%;
+}
+
+
+#buttonlist{
+	margin-top:120px;
+	width:100%;
+	list-style-type: none;
+}
+
+#buttonlist button{
+	width:100%;
+	color: white;
+    text-align: center;
+	background-color: black;
+	margin: 0;
+    padding: 0;
+	border:0;
+}
+#buttonlist button:hover {
+    background-color: white;
+	color:black;
+	cursor: pointer;
+}

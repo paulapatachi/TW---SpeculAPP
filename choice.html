@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Specul-APP</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/navbar.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/user.css" />
+	<link rel="icon" href="assets/img/favicon.jpg">
+</head>
+<body>
+	<nav>
+		<ul class="navigation">
+			<li><a class="active" href="choice.html">Home</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="login.html">Login</a></li>
+			<li><a href="signup.html">Signup</a></li>
+			<li style="float:right"><a href="login.html">Logout</a></li> 
+		</ul>
+	</nav>
+
+<main class="inline-block-center">
+	<div id="upperleft">
+		<p style="font-weight: bold; font-size:34px;"> Games Won/Lost </p>
+		<img src="assets/img/diagrama.png" alt="Diagrama"/>
+	</div>
+	
+	<div id="center">
+		<p style="font-weight: bold; font-size:34px;"> Best three players: </p>
+		<table id="best">
+			<tr><th>Name</th> <th>Win Ratio</th></tr>
+			<tr><th>Player 1</th> <th>75%</th></tr>
+			<tr><th>Player 2</th> <th>73.87%</th></tr>
+			<tr><th>Player 3</th> <th>70.9%</th></tr>
+		</table>
+		<div id="buttonlist">
+			<button type="button">Download HTML</button>
+			<button type="button">Download JSON</button>
+			<button type="button">Download PDF</button>
+		</div>
+	</div>
+	
+	<div id="upperright">
+		<p style="padding-left:5em">Your name</p>
+		<form action="game.html" method="get">
+			<button class="newgame" type="submit">new game</button>
+		</form>
+	</div>
+	
+</main>
+
+</body>
+</html>
