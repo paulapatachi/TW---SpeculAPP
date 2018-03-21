@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Login</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="navbar.css" />
 	<link rel="stylesheet" type="text/css" href="login.css" />
 	<link rel="icon" href="favicon.jpg">
@@ -16,6 +18,16 @@
 			<li><a href="signup.html">Signup</a></li> 
 		</ul>
 	</nav>
+	<div class="responsive-bar">
+		<h1>MENU</h1>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("h1").click(function(){
+				$("ul").slideToggle(500);
+			})
+		})
+	</script>
 	<section id="loginform">
 		<form id="myForm" method="post" action="choice.html" >
 			<input type="text" id="name" name="email" placeholder="E-mail" ><br>
