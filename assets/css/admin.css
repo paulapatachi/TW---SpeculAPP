@@ -1,5 +1,7 @@
 
 .upperleft{
+  position: relative;
+  top:70px;
 	float: left;
 	width:49%;
 	height:480px;
@@ -9,6 +11,8 @@
 	
 }
 .upperright{
+  position: relative;
+  top:70px;
 	float: right;
 	width:49%;
 	height: 480px;
@@ -26,7 +30,7 @@
   border: 0;
   padding: 15px;
   color: white;
-  font-size: 55px;
+  font-size: 250%;
   cursor: pointer;
 }
 #del:hover{
