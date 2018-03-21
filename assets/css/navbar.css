@@ -1,15 +1,16 @@
+
 ul.navigation {
-	list-style-type: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: black;
-	top: 0;
-	left: 0;
-	right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-	position: fixed;
-	z-index: 1;
+    position: fixed;
+    z-index: 1;
 
 }
 
@@ -25,9 +26,7 @@ ul.navigation li a {
     text-decoration: none;
 }
 
-/*ul.navigation li a:hover {
-    background-color: #333;
-}*/
+
 ul.navigation li a:hover:not(.active) {
     background-color: #333;
 }
@@ -36,5 +35,42 @@ ul.navigation li a:hover:not(.active) {
     background-color: #333;
 }
 body{
-	background-image: url("../img/city.jpg");
+    background-image: url("../img/city.jpg");
+}
+
+.responsive-bar
+{
+    margin: 0;
+    padding: 10px, 30px;
+    overflow: hidden;
+    background-color: black;
+    width: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+.responsive-bar h1{
+    margin: 0;
+    padding:0; 
+    color: #fff;
+    float:right;
+    font-size: 15px;
+    top:0;
+    padding: 5px 10px;
+    background-color: #f2184f;
+    cursor: pointer;
+    
+    
+}
+@media (max-width:600px){
+
+ul.navigation {
+    display: none;
+}
+.responsive-bar{
+    display: block;
+}
+ul.navigation li {
+    float:none;
+    display:block;
+}
 }
