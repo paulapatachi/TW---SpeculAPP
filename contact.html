@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Contact</title>
+	<title>Contact</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="assets/css/navbar.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/contact.css" />
 	<link rel="icon" href="assets/img/favicon.jpg">
@@ -16,6 +18,17 @@
 			<li><a href="signup.html">Signup</a></li> 
 		</ul>
 	</nav>
+	
+	<div class="responsive-bar">
+		<h1>MENU</h1>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("h1").click(function(){
+				$("ul").slideToggle(500);
+			})
+		})
+	</script>
 
 <section id="names">
 <p id="creator"> Game Creators</p>
