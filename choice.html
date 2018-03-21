@@ -30,35 +30,34 @@
 		})
 	</script>
 
-<main >
-	<div id="upperleft">
-		<p style="font-weight: bold; font-size:34px; align-content: center;"> Games Won/Lost </p>
-		<img src="assets/img/diagrama.png" alt="Diagrama"/>
-	</div>
-	
-	<div id="center">
-		<p style="font-weight: bold; font-size:34px;"> Best three players: </p>
-		<table id="best">
-			<tr><th>Name</th> <th>Win Ratio</th></tr>
-			<tr><th>Player 1</th> <th>75%</th></tr>
-			<tr><th>Player 2</th> <th>73.87%</th></tr>
-			<tr><th>Player 3</th> <th>70.9%</th></tr>
-		</table>
-		<div id="buttonlist">
-			<button type="button">Download HTML</button>
-			<button type="button">Download JSON</button>
-			<button type="button">Download PDF</button>
+	<div class="console">
+		<div id="upperleft">
+			<p style="font-weight: bold; font-size:34px; align-content: center;"> Games Won/Lost </p>
+			<img src="assets/img/diagrama.png" alt="Diagrama"/>
+		</div>
+		
+		<div id="center">
+			<p style="font-weight: bold; font-size:34px;"> Best three players: </p>
+			<table id="best">
+				<tr><th>Name</th> <th>Win Ratio</th></tr>
+				<tr><th>Player 1</th> <th>75%</th></tr>
+				<tr><th>Player 2</th> <th>73.87%</th></tr>
+				<tr><th>Player 3</th> <th>70.9%</th></tr>
+			</table>
+			<div id="buttonlist">
+				<button type="button">Download HTML</button>
+				<button type="button">Download JSON</button>
+				<button type="button">Download PDF</button>
+			</div>
+		</div>
+		
+		<div id="upperright">
+			<p style="padding-left:5em">Your name</p>
+			<form action="game.html" method="get">
+				<button class="newgame" type="submit">New Game</button>
+			</form>
 		</div>
 	</div>
-	
-	<div id="upperright">
-		<p style="padding-left:5em">Your name</p>
-		<form action="game.html" method="get">
-			<button class="newgame" type="submit">New Game</button>
-		</form>
-	</div>
-	
-</main>
 
 </body>
 </html>
