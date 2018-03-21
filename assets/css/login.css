@@ -12,8 +12,7 @@
 	border-top: 8px solid black;
     background-color: rgba(0,0,0,0.7);
 	text-align: center;
-	/*border: 2px solid red;
-    border-radius: 12px;*/
+
 }
 
 #myForm #name,#surname {
@@ -59,4 +58,18 @@
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+@media (max-width:600px){
+  #loginform{
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  margin-top: 10%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+
 }
