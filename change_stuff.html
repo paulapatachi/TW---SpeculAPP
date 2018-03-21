@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Settings</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="assets/css/navbar.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/changestuff.css" />
+	<link rel="icon" href="assets/img/favicon.jpg">
+</head>
+<body>
+	<nav>
+		<ul class="navigation">
+			<li><a href="admin.html">Home</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="login.html">Login</a></li>
+			<li><a href="signup.html">Signup</a></li>
+			<li style="float:right"><a href="login.html">Logout</a></li> 
+			
+		</ul>
+	</nav>
+	<div class="responsive-bar">
+		<h1>MENU</h1>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("h1").click(function(){
+				$("ul").slideToggle(500);
+			})
+		})
+	</script>
+		<div class="board">
+		<p>current win sum: 150 RON</p>
+		<form>
+				<input type="text" class="delete" name="delete" >
+				<input type="submit" value="Change win sum" class="sub">
+		</form>
+		<p>current lose sum: 200 RON</p>
+		<form>
+				<input type="text" class="delete" name="delete" >
+				<input type="submit" value="Change lose sum" class="sub">
+		</form>
+		<p>dollar exchange rate: 3.99 RON</p>
+		<form>
+				<input type="text" class="delete" name="delete" >
+				<input type="submit" value="Change dollar rate" class="sub">
+		</form>
+		<p>euro exchange rate: 4.57 RON</p>
+		<form >
+				<input type="text" class="delete" name="delete" >
+				<input type="submit" value="Change euro rate" class="sub">
+		</form>
+		
+		
+	</div>
+</body>
+</html>

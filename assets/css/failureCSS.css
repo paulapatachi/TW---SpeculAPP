@@ -1,0 +1,24 @@
+
+.failure{
+	color: white;
+	background-color: black;
+	text-align: center;
+	margin-top: 100px;
+	margin-left: 35%;
+	margin-right: 35%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+
+}
+
+@media (max-width:600px){
+  .failure{
+    margin-left:2px;
+    margin-right:2px;
+    width: 100%;
+
+     
+
+  }
+
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Esuare</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="navmenu.css" />
+	<link rel="stylesheet" type="text/css" href="navbar.css" />
+</head>
+<body>
+<nav>
+<ul class="navigation">
+  <li><a href="home.php">Home</a></li>
+  <li><a href="contact.php">Contact</a></li>
+  <li><a href="about.php">About</a></li>
+  <li><a href="jsandformual.html">Login</a></li>
+  <li><a href="signup.php">Signup</a></li>
+</ul>
+</nav>
+<div class="responsive-bar">
+		<h1>MENU</h1>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("h1").click(function(){
+				$("ul").slideToggle(500);
+			})
+		})
+	</script>
+<h1 class="failure"><u> Autentificare Esuata! </u></h1>
+</body>
+</html>

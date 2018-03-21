@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> New Game </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="navbar.css" />
+	<link rel="stylesheet" type="text/css" href="gamecss.css" />
+	<link rel="icon" href="favicon.jpg">
+</head>
+<body>
+	<nav>
+		<ul class="navigation">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="login.html">Login</a></li>
+			<li><a href="signup.html">Signup</a></li>
+			<li style="float:right"><a href="login.html">Logout</a></li> 
+		</ul>
+	</nav>
+	<div class="responsive-bar">
+		<h1>MENU</h1>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("h1").click(function(){
+				$("ul").slideToggle(500);
+			})
+		})
+	</script>
+	<div class="console">
+	<div class="console1" id="console1">
+		<p>Cotatie RON</p><br>
+		<div>
+			<p>1 EUR = 4.57 RON </p>
+			<p>1 USD = 3.99 RON </p>
+		</div>
+	</div>
+	<div class="console2">
+
+		<p>win sum: 255 lose sum: 33 </p>
+
+		<form class="ex" name="ex"  onsubmit="return calculate()">
+		<fieldset>
+			<legend>From</legend>
+				<input type="radio" name="currency1" value="RON" checked> RON<br>
+				<input type="radio" name="currency1" value="EUR"> EUR<br>
+				<input type="radio" name="currency1" value="USD"> USD
+		</fieldset>
+		<fieldset>
+			<legend>To</legend>
+				<input type="radio" name="currency2" value="RON" checked> RON<br>
+				<input type="radio" name="currency2" value="EUR"> EUR<br>
+				<input type="radio" name="currency2" value="USD"> USD
+		</fieldset>
+		<fieldset>
+		<legend>Sum</legend>
+			Currency 1:<br>
+			<input type="text" name="currency1sum" value="0"><br>
+			<br>
+		</fieldset>
+			<input class="exchange" type="submit" value="convert">
+		</form>
+		<table border="1" style="margin-top:5px;width:100%;">
+		<tr>
+			<td>RON</td><td id="RON">200</td>
+		</tr>
+		<tr>
+			<td>USD</td><td id="USD">0</td>
+		</tr>
+		<tr>
+			<td>EUR</td><td id="EUR">0</td>
+		</tr>
+		<tr>
+			<td>TOTAL(RON)</td><td id="total"></td>
+		</tr>
+		</table>
+	</div>
+	</div>
+	
+
+</body>
+</html>

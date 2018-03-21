@@ -1,0 +1,69 @@
+
+.upperleft{
+	float: left;
+	width:49%;
+	height:480px;
+	border-bottom: 8px solid black;
+	border-top: 8px solid black;
+ 
+	
+}
+.upperright{
+	float: right;
+	width:49%;
+	height: 480px;
+	border-bottom: 8px solid black;
+	border-top: 8px solid black;
+  
+	}
+
+#del,#cha {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  background: black;
+  width: 100%;
+  height:480px;
+  border: 0;
+  padding: 15px;
+  color: white;
+  font-size: 55px;
+  cursor: pointer;
+}
+#del:hover{
+  background: white;
+  color:black;
+}
+#cha:hover{
+  background: white;
+  color:black;
+
+}
+
+@media (max-width:600px){
+	.upperleft{
+    position: relative;
+    top:20px;
+		float: none;
+		width:100%;
+		height: 200px;
+		}
+.upperright{
+	float: none;
+  position: relative;
+  top:30px;
+	width: 100%;
+	height: 200px;
+   }
+   .upperright form{
+   	height: 200px;
+   }
+   .upperleft form{
+   	height: 200px;
+   }
+
+   #del,#cha {
+   	font-size: 100%;
+   	height:200px;
+   }
+}
+
