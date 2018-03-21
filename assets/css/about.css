@@ -7,8 +7,6 @@
 	margin-top: 4%;
 	margin-right: 20%;
 	margin-left: 20%;
-	border-bottom: 8px solid black;
-	border-top: 8px solid black;
     background-color: rgba(0,0,0,0.7);
 	border: 2px solid red;
     border-radius: 12px;
@@ -26,13 +24,12 @@
 
 @media (max-width:600px){
 	#about{
-	margin-left: 5px;
-    margin-right: 5px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    font-size: 90%;
-   
-}
+		margin-left: 5px;
+	    margin-right: 5px;
+	    padding-top: 10px;
+	    padding-left: 10px;
+	    padding-right: 10px;
+	    padding-bottom: 10px;
+	    font-size: 90%;
+	}
 }
