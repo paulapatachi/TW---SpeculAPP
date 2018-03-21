@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Delete</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="assets/css/navbar.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/deletestuff.css" />
 	<link rel="icon" href="assets/img/favicon.jpg">
@@ -17,13 +19,49 @@
 			<li style="float:right"><a href="login.html">Logout</a></li> 
 		</ul>
 	</nav>
-	<div class="menu1">
+	<div class="responsive-bar">
+		<h1>MENU</h1>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("h1").click(function(){
+				$("ul").slideToggle(500);
+			})
+		})
+	</script>
+
 	<div class="upperleft">
 		<section class="deletesessionbutton">
 			<form>
 				<label for="delete1">Delete Session No.</label><br>
 				<input type="text" id="delete1" name="delete" ><br>
-				<input type="submit" value="Submit" class="sub">
+				<input type="submit" value="Submit" class="sub"><br>
+				<table style="width:100%">
+				  <tr>
+					<th>Sesion ID</th>
+					<th>User ID</th> 
+					<th>Start Time</th>
+					<th>End Time</th>
+				  </tr>
+				  <tr>
+					<td>1023</td>
+					<td>11</td> 
+					<td>20.03.2018</td>
+					<td>20.03.2018</td>
+				  </tr>
+				  <tr>
+					<td>1467</td>
+					<td>28</td> 
+					<td>21.03.2018</td>
+					<td>21.03.2018</td>
+				  </tr>
+				  <tr>
+					<td>999</td>
+					<td>17</td> 
+					<td>19.03.2018</td>
+					<td>19.03.2018</td>
+				  </tr>
+				</table>
 			</form>
 		</section>
 
@@ -36,11 +74,9 @@
 				<input type="submit" value="Submit" class="sub">
 			</form>
 		</section>
-
-	</div>
-	
 </div>
-<div class="menu2">
+
+
 <div class="lowleft">
 <section class="deletesessionbutton">
 			<form>
@@ -60,6 +96,6 @@
 		</section>
 
 </div>
-</div>
+
 </body>
 </html>
