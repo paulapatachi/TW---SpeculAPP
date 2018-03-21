@@ -1,19 +1,18 @@
-.menu {
-	width:100%;
-	position:relative;
-  top:45px;
-  text-transform: uppercase;
-  color:white;
-  font-family: "Roboto", sans-serif;
-}
+
 .board{
+  position:relative;
+  top:45px;  
 	margin: 0 auto;
 	width:50%;
 	height:495px;
 	border-bottom: 8px solid black;
 	border-top: 8px solid black;
-    background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.7);
 	text-align:center;
+  text-transform: uppercase;
+  color:white;
+  font-family: "Roboto", sans-serif;
+
 }
 .delete{
 	width:85%;
@@ -24,7 +23,7 @@
   text-transform: uppercase;
   outline: 0;
   background: black;
-  width: 85%;
+  width: 80%;
   border: 0;
   padding: 15px;
   color: white;
@@ -35,3 +34,11 @@
   background: white;
   color:black;
 }
+@media (max-width:600px){
+  .board{
+    width:100%;
+
+  }
+
+
+  }
