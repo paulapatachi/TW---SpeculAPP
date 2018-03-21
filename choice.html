@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Specul-APP</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="assets/css/navbar.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/user.css" />
 	<link rel="icon" href="assets/img/favicon.jpg">
@@ -17,10 +19,20 @@
 			<li style="float:right"><a href="login.html">Logout</a></li> 
 		</ul>
 	</nav>
+	<div class="responsive-bar">
+		<h1>MENU</h1>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("h1").click(function(){
+				$("ul").slideToggle(500);
+			})
+		})
+	</script>
 
-<main class="inline-block-center">
+<main >
 	<div id="upperleft">
-		<p style="font-weight: bold; font-size:34px;"> Games Won/Lost </p>
+		<p style="font-weight: bold; font-size:34px; align-content: center;"> Games Won/Lost </p>
 		<img src="assets/img/diagrama.png" alt="Diagrama"/>
 	</div>
 	
@@ -42,7 +54,7 @@
 	<div id="upperright">
 		<p style="padding-left:5em">Your name</p>
 		<form action="game.html" method="get">
-			<button class="newgame" type="submit">new game</button>
+			<button class="newgame" type="submit">New Game</button>
 		</form>
 	</div>
 	
