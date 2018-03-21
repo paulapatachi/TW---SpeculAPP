@@ -15,11 +15,11 @@
     background-color: rgba(0,0,0,0.7);
 	text-align:center;
 }
-#delete{
+.delete{
 	width:85%;
 	margin-bottom:5px;
 }
-#sub {
+.sub {
   
   text-transform: uppercase;
   outline: 0;
@@ -31,7 +31,7 @@
   font-size: 14px;
   cursor: pointer;
 }
-#sub:hover,#myForm #sub:active,#myForm #sub:focus {
+.sub:hover,#myForm .sub:active,#myForm .sub:focus {
   background: white;
   color:black;
 }
