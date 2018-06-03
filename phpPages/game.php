@@ -104,7 +104,7 @@
 		oci_close($conn);
 	}catch(Exception $e){
 		session_unset();
-		header("Location: already_logged_in.php");
+		header("Location: error_while_connecting.php");
 	}
 	//end of game function, useless
 //	function end_game($outcome,$total_sum,$eur,$usd,$ron){
