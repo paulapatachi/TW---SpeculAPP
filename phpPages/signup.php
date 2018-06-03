@@ -48,7 +48,7 @@
 	</script>
 	<section id="signupform" >
 
-		<form id="myForm2" action="choice.php" onsubmit="return myFunction()">
+		<form id="myForm2" action="createuser.php" onsubmit="return myFunction()">
 
 			<input type="text" id="firstname" name="firstname" placeholder="First Name"> <br>
 			<input type="text" id="lastname" name="lastname" placeholder="Last Name"> <br>
