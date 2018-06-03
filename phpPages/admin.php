@@ -27,7 +27,7 @@
 			<?php	
 				if(isset($_SESSION["logged"])){
 					if($_SESSION["uid"]==1){
-						echo '<li><a href="admin.php">Home</a></li>';
+						echo '<li><a href="admin.php">Home</a></li>';}
 				}
 				else{
 					
