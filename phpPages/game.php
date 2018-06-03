@@ -28,7 +28,7 @@
 		$gameid=$oldgameid+1;
 		oci_free_statement($stid);
 		// Prepare the statement
-		$stid=oci_parse($conn,'INSERT INTO GAME VALUES(:gameid,:sesionid,:userid,2,0,0,0,0)');
+		$stid=oci_parse($conn,'INSERT INTO GAME VALUES(:gameid,:sesionid,:userid,2,1000,0,0,0)');
 		if (!$stid) {
 			$e = oci_error($conn);
 			throw new Exception;
@@ -308,11 +308,11 @@
 
 			if(totalvalue<lose_sum){
 				//game
-				write_game_end(0);
+				write_game_end(0,totalvalue,parseFloat(document.getElementById("USD").innerHTML),parseFloat(document.getElementById("EUR").innerHTML),parseFloat(document.getElementById("RON").innerHTML));
 					
 			}
 			if(totalvalue>=win_sum){
-				write_game_end(1);
+				write_game_end(1,totalvalue,parseFloat(document.getElementById("USD").innerHTML),parseFloat(document.getElementById("EUR").innerHTML),parseFloat(document.getElementById("RON").innerHTML));
 
 			}
 		}
@@ -332,7 +332,7 @@
 		xhttp.send();
 	}
 	
-	function write_game_end(outcome){
+	function write_game_end(outcome,totalvalue,usd,eur,ron){
 		var gameid=parseFloat(document.getElementById("gameid").innerHTML);
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
@@ -340,7 +340,7 @@
 				var res=this.responseText;
 			}
 		};
-		xhttp.open("GET", "game_end.php?gameid="+gameid+"&outcome="+outcome, true);
+		xhttp.open("GET", "game_end.php?gameid="+gameid+"&outcome="+outcome+"&totalvalue="+totalvalue+"&usd="+usd+"&eur="+eur+"&ron="+ron, true);
 		xhttp.send();
 
 		if(outcome==1){
@@ -438,7 +438,7 @@
 			<td>EUR</td><td id="EUR">0</td>
 		</tr>
 		<tr>
-			<td>TOTAL(RON)</td><td id="total"></td>
+			<td>TOTAL(RON)</td><td id="total">1000</td>
 		</tr>
 		</table>
 	</div>
