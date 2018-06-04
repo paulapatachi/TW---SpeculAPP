@@ -114,22 +114,22 @@
 	</script>
 		<div class="board">
 		<p>current win sum: <?php echo htmlspecialchars($winsum); ?></p>
-		<form>
+		<form action="changewinsum.php">
 				<input type="text" class="delete" name="delete" >
 				<input type="submit" value="Change win sum" class="sub">
-		</form>
+		</form >
 		<p>current lose sum: <?php echo htmlspecialchars($losesum); ?></p>
-		<form>
+		<form action="changelosesum.php">
 				<input type="text" class="delete" name="delete" >
 				<input type="submit" value="Change lose sum" class="sub">
 		</form>
 		<p>dollar exchange rate: <?php echo htmlspecialchars($usdrate); ?></p>
-		<form>
+		<form action="changeusdrate.php">
 				<input type="text" class="delete" name="delete" >
 				<input type="submit" value="Change dollar rate" class="sub">
 		</form>
 		<p>euro exchange rate: <?php echo htmlspecialchars($eurrate); ?></p>
-		<form >
+		<form action="changeeurrate.php">
 				<input type="text" class="delete" name="delete" >
 				<input type="submit" value="Change euro rate" class="sub">
 		</form>
