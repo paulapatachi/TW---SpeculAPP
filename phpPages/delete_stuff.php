@@ -93,9 +93,6 @@
 
 <!-- The session information table is created -->
 <?php
-//error_reporting(E_ERROR | E_PARSE);
-error_reporting(E_ALL ^ E_WARNING);
-//ini_set( "display_errors", 0); 
 $conn = oci_connect('speculapp', 'SPECULAPP', 'localhost/XE');
 if (!$conn) {
     $e = oci_error();
