@@ -1,0 +1,35 @@
+#already{
+	line-height: 1.2;
+	padding-top: 50px;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-bottom: 50px;
+	margin-top: 8%;
+	margin-right: 20%;
+	margin-left: 20%;
+    background-color: rgba(0,0,0,0.7);
+	border: 2px solid red;
+    border-radius: 12px;
+	font-family: "Roboto", sans-serif;
+	text-align:center;
+	font-size: 24px;
+	color: white;
+	font-weight: normal;
+	text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+@media (max-width:600px){
+	#already{
+		margin-left: 5px;
+	    margin-right: 5px;
+	    padding-top: 10px;
+	    padding-left: 10px;
+	    padding-right: 10px;
+	    padding-bottom: 10px;
+	    font-size: 90%;
+	}
+}
