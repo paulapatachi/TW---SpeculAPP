@@ -82,6 +82,120 @@
 		})
 	</script>
 
+
+<div class="lowleft">
+<section class="deletesessionbutton">
+			<form action="deletegame.php">
+				<label for="delete3">Delete Game No.</label><br>
+				<input type="text" id="delete3" name="delete" ><br>
+				<input type="submit" value="Submit" class="sub">
+			</form>
+		</section>
+			<!-- The transaction information table is created -->
+			<?php
+			$conn = oci_connect('speculapp', 'SPECULAPP', 'localhost/XE');
+			if (!$conn) {
+				$e = oci_error();
+				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+			}
+
+			$stid2 = oci_parse($conn, 'SELECT * FROM GAME');
+			if (!$stid2) {
+				$e = oci_error($conn);
+				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+			}
+
+			// Perform the logic of the query
+			$r2 = oci_execute($stid2);
+			if (!$r2) {
+				$e = oci_error($stid2);
+				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+			}
+
+			// Fetch the results of the query
+			print('<section id="sessiontable">');
+			print('<table id="gameTable" class="tablesorter" border="1">');
+			print('<thead><tr><th>Game ID</th><th>Sesion ID</th><th>User ID</th><th>Outcome</th><th>Total Sum</th><th>USD Sum</th><th>EUR Sum</th><th>RON Sum</th></tr></thead>');
+			print('<tbody>');
+			while ($row = oci_fetch_array($stid2, OCI_ASSOC+OCI_RETURN_NULLS)) {
+				print "<tr>\n";
+				foreach ($row as $item) {
+					print "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+				}
+				print "</tr>\n";
+			}
+			print('</tbody>');
+			print "</table>";
+			print('</section>');
+
+			oci_free_statement($stid2);
+
+			oci_close($conn);
+			?>
+
+				<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+				<script type="text/javascript">
+				_uacct = "UA-2189649-2";
+				urchinTracker();
+				</script>
+</div>
+<div class="lowright">
+<section class="deletesessionbutton">
+			<form action="deleteuser.php">
+				<label for="delete4">Delete User No.</label><br>
+				<input type="text" id="delete4" name="delete" ><br>
+				<input type="submit" value="Submit" class="sub">
+			</form>
+		</section>
+			<!-- The transaction information table is created -->
+			<?php
+			$conn = oci_connect('speculapp', 'SPECULAPP', 'localhost/XE');
+			if (!$conn) {
+				$e = oci_error();
+				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+			}
+
+			$stid2 = oci_parse($conn, 'SELECT * FROM USERS');
+			if (!$stid2) {
+				$e = oci_error($conn);
+				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+			}
+
+			// Perform the logic of the query
+			$r2 = oci_execute($stid2);
+			if (!$r2) {
+				$e = oci_error($stid2);
+				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+			}
+
+			// Fetch the results of the query
+			print('<section id="sessiontable">');
+			print('<table id="usersTable" class="tablesorter" border="1">');
+			print('<thead><tr><th>User ID</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th></tr></thead>');
+			print('<tbody>');
+			while ($row = oci_fetch_array($stid2, OCI_ASSOC+OCI_RETURN_NULLS)) {
+				print "<tr>\n";
+				foreach ($row as $item) {
+					print "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+				}
+				print "</tr>\n";
+			}
+			print('</tbody>');
+			print "</table>";
+			print('</section>');
+
+			oci_free_statement($stid2);
+
+			oci_close($conn);
+			?>
+
+				<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+				<script type="text/javascript">
+				_uacct = "UA-2189649-2";
+				urchinTracker();
+				</script>
+</div>
+
 	<div class="upperleft">
 		<section class="deletesessionbutton">
 			<form action="deletesession.php">
@@ -207,118 +321,6 @@ oci_close($conn);
 	</div>
 	<!-- End of creation of transaction information table -->
 
-<div class="lowleft">
-<section class="deletesessionbutton">
-			<form action="deletegame.php">
-				<label for="delete3">Delete Game No.</label><br>
-				<input type="text" id="delete3" name="delete" ><br>
-				<input type="submit" value="Submit" class="sub">
-			</form>
-		</section>
-			<!-- The transaction information table is created -->
-			<?php
-			$conn = oci_connect('speculapp', 'SPECULAPP', 'localhost/XE');
-			if (!$conn) {
-				$e = oci_error();
-				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-			}
-
-			$stid2 = oci_parse($conn, 'SELECT * FROM GAME');
-			if (!$stid2) {
-				$e = oci_error($conn);
-				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-			}
-
-			// Perform the logic of the query
-			$r2 = oci_execute($stid2);
-			if (!$r2) {
-				$e = oci_error($stid2);
-				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-			}
-
-			// Fetch the results of the query
-			print('<section id="sessiontable">');
-			print('<table id="gameTable" class="tablesorter" border="1">');
-			print('<thead><tr><th>Game ID</th><th>Sesion ID</th><th>User ID</th><th>Outcome</th><th>Total Sum</th><th>USD Sum</th><th>EUR Sum</th><th>RON Sum</th></tr></thead>');
-			print('<tbody>');
-			while ($row = oci_fetch_array($stid2, OCI_ASSOC+OCI_RETURN_NULLS)) {
-				print "<tr>\n";
-				foreach ($row as $item) {
-					print "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
-				}
-				print "</tr>\n";
-			}
-			print('</tbody>');
-			print "</table>";
-			print('</section>');
-
-			oci_free_statement($stid2);
-
-			oci_close($conn);
-			?>
-
-				<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
-				<script type="text/javascript">
-				_uacct = "UA-2189649-2";
-				urchinTracker();
-				</script>
-</div>
-<div class="lowright">
-<section class="deletesessionbutton">
-			<form action="deleteuser.php">
-				<label for="delete4">Delete User No.</label><br>
-				<input type="text" id="delete4" name="delete" ><br>
-				<input type="submit" value="Submit" class="sub">
-			</form>
-		</section>
-			<!-- The transaction information table is created -->
-			<?php
-			$conn = oci_connect('speculapp', 'SPECULAPP', 'localhost/XE');
-			if (!$conn) {
-				$e = oci_error();
-				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-			}
-
-			$stid2 = oci_parse($conn, 'SELECT * FROM USERS');
-			if (!$stid2) {
-				$e = oci_error($conn);
-				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-			}
-
-			// Perform the logic of the query
-			$r2 = oci_execute($stid2);
-			if (!$r2) {
-				$e = oci_error($stid2);
-				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-			}
-
-			// Fetch the results of the query
-			print('<section id="sessiontable">');
-			print('<table id="usersTable" class="tablesorter" border="1">');
-			print('<thead><tr><th>User ID</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th></tr></thead>');
-			print('<tbody>');
-			while ($row = oci_fetch_array($stid2, OCI_ASSOC+OCI_RETURN_NULLS)) {
-				print "<tr>\n";
-				foreach ($row as $item) {
-					print "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
-				}
-				print "</tr>\n";
-			}
-			print('</tbody>');
-			print "</table>";
-			print('</section>');
-
-			oci_free_statement($stid2);
-
-			oci_close($conn);
-			?>
-
-				<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
-				<script type="text/javascript">
-				_uacct = "UA-2189649-2";
-				urchinTracker();
-				</script>
-</div>
 
 </body>
 </html>
