@@ -67,7 +67,6 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/user.css" />
 	<link rel="icon" href="assets/img/favicon.jpg">
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 				var wins = "<?php echo $wins; ?>";
 				var losses= "<?php echo $losses; ?>";
@@ -97,23 +96,52 @@
 			</script>
 	<script src="canvasjs.min.js"></script>
 
-	<script type="text/javascript">
-		function downloadFile(){
-		var doc = new jsPDF();
-		var specialElementHandlers = {
-		    '#editor': function (element, renderer) {
-		        return true;
-		    }
-		};
 
-		$('#forpdf').click(function () {
-		    doc.fromHTML($('#center').html(), 15, 15, {
-		        'width': 170,
-		            'elementHandlers': specialElementHandlers
-		    });
-		    doc.save('sample-file.pdf');
-		});
-	}
+	<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+
+	<script type="text/javascript">
+		$(function () {
+
+	    var specialElementHandlers = {
+	        '#editor': function (element,renderer) {
+	            return true;
+	        }
+	    };
+	 $('#forpdf').click(function () {
+	        var doc = new jsPDF();
+	        doc.fromHTML(
+	            $('#center').html(), 15, 15, 
+	            { 'width': 170, 'elementHandlers': specialElementHandlers }, 
+	            function(){ doc.save('pdf_top.pdf'); }
+	        );
+
+	    }); 
+
+	 $('#forjson').click(function () {
+	 	//  This gives you an HTMLElement object
+		var element = document.getElementById('center');
+		//  This gives you a string representing that element and its content
+		var html = element.outerHTML;
+		var json = JSON.stringify({html:html})
+
+		var hiddenElement = document.createElement('a');
+
+		hiddenElement.href = 'data:attachment/json,' + encodeURI(json);
+		hiddenElement.target = '_blank';
+		hiddenElement.download = 'json_top.json';
+		hiddenElement.click();
+    });
+
+	    $('#forhtml').click(function () {
+	    	var elHtml = document.getElementById('center').innerHTML;
+		    var link = document.createElement('a');
+		    mimeType = 'text/plain';
+
+		    link.setAttribute('download', 'html_top.html');
+		    link.setAttribute('href', 'data:' + mimeType  +  ';charset=utf-8,' + encodeURIComponent(elHtml));
+		    link.click(); 
+			    });  
+			});
 	</script>
 
 </head>
@@ -198,14 +226,10 @@
 			}
 		?>
 			<div id="buttonlist">
-				<a href="#html" download>
-					<button id="forhtml" type="button">Download HTML</button>
-				</a>
-				<a href="#json" download>
-					<button id="forjson" type="button">Download JSON</button>
-				</a>
 				<div id="editor"></div>
-					<button id="forpdf" type="button" onclick="downloadFile()">Download PDF</button>
+				<button id="forhtml" type="button">Download HTML</button>
+				<button id="forjson" type="button">Download JSON</button>
+				<button id="forpdf" type="button">Download PDF</button>
 			</div>
 		</div>
 		
