@@ -65,7 +65,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="assets/css/navbar.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/user.css" />
-	<link rel="icon" href="assets/img/favicon.jpg">
+	<link rel="icon" href="assets/img/favicon.jpg" />
 
 	<script type="text/javascript">
 				var wins = "<?php echo $wins; ?>";
@@ -216,7 +216,7 @@
 					}
 					$arr=oci_fetch_array($statement,OCI_NUM);
 					$name=$arr[0].' '.$arr[1];
-					echo '<tr><td>'.$name.'</td><td>'.$ratio.'</td></tr>';
+					echo '<tr><td>'.$name.'</td><td>'.$ratio.'% </td></tr>';
 				}
 				echo '</table>';
 				oci_free_statement($statement);
