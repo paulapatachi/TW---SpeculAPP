@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>SpeculApp</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+    <script src="js/scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      <div class="banner">
+        <img src="speculapp.png" width="227" height="50" alt="SpeculApp HTML logo">
+      </div>
+      <h1>SpeculApp</h1>
+    </header>
+    <div role="contentinfo">
+      <dl>
+        <dt>Autori</dt>
+        <dd>
+          
+          <a href="https://www.facebook.com/avram.andreea22">Avram Andreea</a>
+          &amp;
+          <a href="https://www.facebook.com/paula.patachi">Patachi Paula</a>
+        </dd>
+      </dl>
+    </div>
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2>Abstract</h2>
+      <p>
+        Acest proiect este realizat in cadrul materiei "Tehnologii web", predata de domnul profesor universitar Buraga Sabin Corneliu, in semestrul II, anul II in cadrul Facultatii de Informatica Iasi.
+      </p>
+    </section>
+    <section id="introduction" role="doc-introduction">
+      <!-- review? -->
+      <h2>Introducere</h2>
+      <p>
+        SpeculAPP este un joc Web care simuleaza operatiuni de specula valutara. 
+      </p>
+      <p>
+        Administratorul stabileste valutele (EUR, USD, GBP, etc.), marjele de randomizare a cursului, durata de valabilitate a cursului (in secunde), suma de inceput (in RON), pragul de castig (e.g., peste 2000 RON) si pragul de pierdere (de pilda, sub 100 RON). 
+      </p>
+      <p>
+        Jucatorul are la dispozitie doua seturi de comenzi: 
+      </p>
+      <ul>
+        <li>Afla curs pentru valuta V (daca cursul generat anterior este mai vechi decat durata de valabilitate setata, va fi generat un nou curs; altfel va fi luat in considerare cel vechi).</li>
+        <li>Schimba X unitati din valuta V in valuta W (dupa fiecare operatiune de schimb valutar, se calculeaza valoarea totala a portofoliului jucatorului in RON; daca aceasta valoare e mai mica decat pragul de pierdere, jucatorul a pierdut jocul, iar daca e mai mare decat cel de castig, atunci a castigat jocul, altfel poate continua cu alte operatiuni)</li>
+        
+      </ul>
+       <p>Clasamentul celor mai "bogati" jucatori va fi generat dinamic si ca flux de stiri Atom sau drept raport disponibil in formatele HTML, JSON si PDF.
+      </p>
+    </section>
+    <section id="structure">
+      <!-- review? -->
+      <h2>Structura</h2>
+      <p>
+        In continuare vom prezenta paginile web din proiect si functionalitatile acestora.
+      </p>
+      <section id="Root">
+        <!-- review? -->
+        <h3>Home</h3>
+        <p>
+          Prima pagina care se deschide la accesarea site-ului.
+		</p>
+          <p>
+           Aceasta contine sigla jocului si referinte catre celelalte pagini.
+        </p>
+      </section>
+      <section id="article">
+        <!-- review? -->
+        <h3>Contact</h3>
+        <p>
+        	 <a href="https://www.facebook.com/avram.andreea22">Avram Andreea</a>
+         </p>
+         <p>
+          <a href="https://www.facebook.com/paula.patachi">Patachi Paula</a>
+        </p>
+       
+      </section>
+      <section id="hunk">
+        <!-- review? -->
+        <h3>About</h3>
+        <p>
+          Pagina contine modul de desfasurare al jocului si cateva facilitati.
+        </p>
+
+      </section>
+      <section id="inline">
+        <!-- review? -->
+        <h3>Login &amp; Signup</h3>
+        <p>
+        	Paginile permit logarea pentru utilizatorii deja inregistrati si posibilitatea crearii unui cont nou.
+        </p>
+      </section>
+      <section id="references">
+        <!-- review? -->
+        <h3>Pagina principala dupa logare</h3>
+        <p>
+        Contine:
+        </p>
+        <ul>
+        	<li>Inceperea unui joc nou.</li>
+        	<li>Vizualizarea/descarcarea topului celor mai buni jucatori.</li>
+        	<li>Statistica jocurilor pierdute/castigate.</li>
+        </ul>
+      </section>
+
+      <section id="interactive">
+        <!-- review? -->
+        <h3>New game</h3>
+        <p>
+          Pentru a putea juca un joc nou, trebuie parcursi urmatorii pasi:
+        </p>
+        <ul>
+        	<li>Vizualizati in stanga paginii cursul valutar al monedelor de schimb (acestea se modifica la fiecare 10 secunde)</li> 
+        	<li>Selectati moneda din care doriti sa faceti conversia</li>
+        	<li>Selectati moneda in care doriti sa faceti conversia</li>
+        	<li>Introduceti suma pe care doriti sa o schimbati</li>
+        	<li>Apasati pe butonul "convert"</li>
+
+        </ul>
+         <p>
+          In tabelul din dreapta jos puteti observa situatia financiara din joc. 
+        </p>
+         <p>
+          Aceasta se va modifica dupa fiecare conversie de valuta.
+        </p>
+         <p>
+          Jocul se poate termina in una din situatiile:
+        </p>
+        <ul>
+        	<li>Suma totala din cont este de minim 2000 RON, iar jucatorul este declarat castigator.</li>
+        	<li>Suma totala din cont este mai mica de 100 RON, iar jucatorul este declarat pierzator.</li>
+        
+        </ul>
+      </section>
+      <section id="HTMLRoles">
+        <!-- review? -->
+        <h3>Pagina admin - delete</h3>
+        <p>
+          Pagina poate fi accesata doar de administratorul site-ului.
+        </p>
+        <p>
+          Pagina permite stergerea :
+        </p>
+        <ul>
+        	<li>unui joc;</li>
+        	<li>unui user;</li>
+        	<li>unei sesiuni;</li>
+        	<li>unei tranzactii;</li>
+        
+        </ul>
+      </section>
+      <section id="validate">
+        <!-- review? -->
+        <h3>Pagina admin - change</h3>
+        <p>
+          Pagina poate fi accesata doar de administratorul site-ului.
+        </p>
+        <p>
+          Pagina permite schimbarea :
+        </p>
+        <ul>
+        	<li>pragului de castig;</li>
+        	<li>pragului de pierdere;</li>
+        	<li>cursului valutar al monedei EURO; </li>
+        	<li>cursului valutar al monedei USD;</li>
+        
+        </ul>
+      </section>
+    </section>
+  </body>
+</html>
