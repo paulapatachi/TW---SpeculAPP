@@ -103,7 +103,7 @@
 		$(function () {
 
 	    var specialElementHandlers = {
-	        '#editor': function (element,renderer) {
+	        '#buttonlist': function (element,renderer) {
 	            return true;
 	        }
 	    };
@@ -226,7 +226,6 @@
 			}
 		?>
 			<div id="buttonlist">
-				<div id="editor"></div>
 				<button id="forhtml" type="button">Download HTML</button>
 				<button id="forjson" type="button">Download JSON</button>
 				<button id="forpdf" type="button">Download PDF</button>
