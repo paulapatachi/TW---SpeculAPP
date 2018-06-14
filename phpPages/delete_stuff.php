@@ -52,6 +52,12 @@
 	</script>
 	<link rel="stylesheet" type="text/css" href="http://tablesorter.com/docs/js/chili/javascript.css">
 
+	<style>
+		.firstRow{
+			height:30px;
+			text-align:center;
+		}
+	</style>
 </head>
 <body>
 	<nav>
@@ -124,7 +130,7 @@
 			// Fetch the results of the query
 			print('<section id="sessiontable">');
 			print('<table id="gameTable" class="tablesorter" border="1">');
-			print('<thead><tr><th>Game ID</th><th>Sesion ID</th><th>User ID</th><th>Outcome</th><th>Total Sum</th><th>USD Sum</th><th>EUR Sum</th><th>RON Sum</th></tr></thead>');
+			print('<tr class="firstRow"><th>Game ID</th><th>Sesion ID</th><th>User ID</th><th>Outcome</th><th>Total Sum</th><th>USD Sum</th><th>EUR Sum</th><th>RON Sum</th></tr>');
 			print('<tbody>');
 			while ($row = oci_fetch_array($stid2, OCI_ASSOC+OCI_RETURN_NULLS)) {
 				print "<tr>\n";
@@ -180,7 +186,7 @@
 			// Fetch the results of the query
 			print('<section id="sessiontable">');
 			print('<table id="usersTable" class="tablesorter" border="1">');
-			print('<thead><tr><th>User ID</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th></tr></thead>');
+			print('<tr class="firstRow"><th>User ID</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th></tr>');
 			print('<tbody>');
 			while ($row = oci_fetch_array($stid2, OCI_ASSOC+OCI_RETURN_NULLS)) {
 				print "<tr>\n";
@@ -248,7 +254,7 @@ if (!$r2) {
 // Fetch the results of the query
 print('<section id="sessiontable">');
 print('<table id="sessionTable" class="tablesorter" border="1">');
-print('<thead><tr><th>Session ID</th><th>User ID</th><th>Start time</th><th>End time</th></tr></thead>');
+print('<tr class="firstRow"><th>Session ID</th><th>User ID</th><th>Start time</th><th>End time</th></tr>');
 print('<tbody>');
 while ($row = oci_fetch_array($stid2, OCI_ASSOC+OCI_RETURN_NULLS)) {
     print "<tr>\n";
@@ -304,7 +310,7 @@ oci_close($conn);
 			// Fetch the results of the query
 			print('<section id="sessiontable">');
 			print('<table id="transactionTable" class="tablesorter" border="1">');
-			print('<thead><tr><th>Transaction ID</th><th>Sesion ID</th><th>Game ID</th><th>User ID</th><th>Curr ID 1</th><th>Curr ID 2</th><th>SUM 1</th><th>SUM 2</th><th>TIMP</th></thead>');
+			print('<tr class="firstRow"><th>Transaction ID</th><th>Sesion ID</th><th>Game ID</th><th>User ID</th><th>Curr ID 1</th><th>Curr ID 2</th><th>SUM 1</th><th>SUM 2</th><th>TIMP</th></tr>');
 			print('<tbody>');
 			while ($row = oci_fetch_array($stid2, OCI_ASSOC+OCI_RETURN_NULLS)) {
 				print "<tr>\n";
